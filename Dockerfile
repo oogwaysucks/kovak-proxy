@@ -6,9 +6,8 @@ ENV PATH="/opt/venv/bin:$PATH"
 RUN pip install mitmproxy
 
 WORKDIR /app
-COPY start.sh .
-RUN chmod +x start.sh
+COPY catch.py .
 
 EXPOSE 8080
 
-CMD ["./start.sh"]
+CMD ["mitmweb", "-s", "/app/catch.py", "--listen-host", "0.0.0.0", "--listen-port", "8080", "--set", "web_host=0.0.0.0", "--set", "web_port=8081"]
