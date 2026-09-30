@@ -10,4 +10,4 @@ COPY catch.py .
 
 EXPOSE 5000
 
-CMD ["mitmweb", "-s", "/app/catch.py", "--listen-host", "0.0.0.0", "--listen-port", "5000", "--set", "web_host=0.0.0.0", "--set", "web_port=5001"]
+CMD ["sh", "-c", "mitmweb -s /app/catch.py --listen-host 0.0.0.0 --listen-port ${PORT:-5000} --set web_host=0.0.0.0 --set web_port=5001"]
