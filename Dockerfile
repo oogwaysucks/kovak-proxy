@@ -8,6 +8,6 @@ RUN pip install mitmproxy
 WORKDIR /app
 COPY catch.py .
 
-EXPOSE 8080
+EXPOSE 5000
 
-CMD ["mitmweb", "-s", "/app/catch.py", "--listen-host", "0.0.0.0", "--listen-port", "8080", "--set", "web_host=0.0.0.0", "--set", "web_port=8081"]
+CMD ["mitmweb", "-s", "/app/catch.py", "--listen-host", "0.0.0.0", "--listen-port", "5000", "--set", "web_host=0.0.0.0", "--set", "web_port=5001"]
