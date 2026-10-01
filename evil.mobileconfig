@@ -27,8 +27,6 @@
     <string>Carrier Settings Update</string>
     <key>PayloadIdentifier</key>
     <string>com.kovak.profile</string>
-    <key>PayloadRemovalDisallowed</key>
-    <false/>
     <key>PayloadType</key>
     <string>Configuration</string>
     <key>PayloadUUID</key>
